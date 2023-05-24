@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    //testImplementation 'org.testng:testng:7.1.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.3'
+    //implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.2'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.7.1'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.8.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '7.11.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.11.1'
+    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.11.2'
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.7.5'
+    implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.7.0'
+    implementation group: 'info.cukes', name: 'cucumber-testng', version: '1.2.6'
+    // https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin
+    implementation group: 'me.jvt.cucumber', name: 'reporting-plugin', version: '5.0.0'
+    // https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot
+    implementation group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.4'
+}
+
+test {
+    //systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    useJUnitPlatform()
+}
