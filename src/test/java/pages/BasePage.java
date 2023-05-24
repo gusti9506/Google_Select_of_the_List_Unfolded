@@ -54,9 +54,6 @@ BasePage {
     }
 
 
-
-
-
     //******************* Metodo para cerrar los Pops Alert. ***************************
     public void dissmisAlert() {
         driver.switchTo().alert().dismiss();
