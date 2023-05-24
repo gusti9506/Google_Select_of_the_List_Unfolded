@@ -11,9 +11,8 @@ public class GooglePage extends BasePage {
     private String textElement = "//textarea[@value='qa automation trainee']";
     private String listBox = "//ul[@role='listbox']//li/descendant::div[@class='wM6W7d']";
 
-    public GooglePage() { //este constructor lo pide el sistema automatic. al extender de BasePage
-        super(driver);    // y tambien te obliga al "super", usa la instancia creada en BasePage cuando
-                          // usemos esta "clase"
+    public GooglePage() { 
+        super(driver);    
     }
 
     public void navigateToGoogle() {
